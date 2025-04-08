@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotaract Club Event Management</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            max-width: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff416c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #212529;
+        }
+
+        p {
+            text-align: center;
+            color: #495057;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+
+        input, textarea, select, button {
+            width: 60%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #ff416c;
+            box-shadow: 0 0 8px rgba(255, 65, 108, 0.5);
+        }
+
+        button {
+            width: 60%;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #343a40;
+            color: white;
+            margin-top: 2rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ff416c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        #about, #contact {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="rotaract-logo.png" alt="Rotaract Club Logo">
+        <h1>Rotaract Club Event Management</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About Us</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+    <div class="container" id="home">
+        <h1>Welcome to Rotaract Club Events</h1>
+        <p>Join us in making a difference through impactful events and activities. Explore upcoming events and be part of our community-driven initiatives.</p>
+
+        <h2>Register for an Event</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event">Event:</label>
+                <select id="event" name="event" required>
+                    <option value="">--Select Event--</option>
+                    <option value="community_service">Community Service</option>
+                    <option value="workshop">Workshop</option>
+                    
+                </select>
+            </div>
+
+             <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container" id="about">
+        <h1>About Us</h1>
+        <p>The Rotaract Club is a global organization that empowers young professionals to create positive change in their communities. Through service, leadership, and fellowship, we aim to make a meaningful impact in the world.</p>
+        <p>We organize events such as community service projects, professional development workshops, and social gatherings to bring people together for a greater cause.</p>
+    </div>
+    <div class="container" id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or would like to get involved, feel free to reach out to us:</p>
+        <ul>
+            <li>Email: info@rotaractclub.com</li>
+            <li>Phone: +1 234 567 890</li>
+            <li>Address: 123 Rotaract Street, Community City</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rotaract Club. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
